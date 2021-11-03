@@ -59,3 +59,4 @@ C:\Users\NTBK_014\Desktop\CamApp-master\CamApp\obj\Debug\CamApp.application
 C:\Users\NTBK_014\Desktop\CamApp-master\CamApp\obj\Debug\CamApp.csproj.CopyComplete
 C:\Users\NTBK_014\Desktop\CamApp-master\CamApp\obj\Debug\CamApp.exe
 C:\Users\NTBK_014\Desktop\CamApp-master\CamApp\obj\Debug\CamApp.pdb
+C:\Users\NTBK_014\Desktop\CamApp-master\CamApp\obj\Debug\CamApp.csproj.AssemblyReference.cache
