@@ -100,7 +100,6 @@ namespace CamApp
                 {
                     //capture = new VideoCapture(camId, VideoCapture.API.Ffmpeg);
                     capture = new VideoCapture("rtsp://admin:admin@192.168.1.88:554");
-
                     // Obtiene todos los dispositivos de cámara disponibles
                     DsDevice[] _SystemCamereas = DsDevice.GetDevicesOfCat(FilterCategory.VideoInputDevice);
                     var dataSource = new List<Camera>();
