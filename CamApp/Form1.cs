@@ -6,7 +6,6 @@ using System.Windows.Forms;
 using Emgu.CV;
 using Emgu.CV.Structure;
 using DirectShowLib;
-using System.Threading;
 
 
 namespace CamApp
@@ -43,7 +42,6 @@ namespace CamApp
             
             if (capture != null && capture.Ptr != IntPtr.Zero)
             {
-
                 try
                 {
                     Mat recImg = new Mat();
@@ -56,8 +54,10 @@ namespace CamApp
 
                     if (DFlag)
                     {
+
                         pictureBox1.Image = _frame.ToImage<Bgr, byte>().ToBitmap();
                         //pictureBox1.Image = smoothedFrame.ToImage<Bgr, byte>().ToBitmap();
+
                         smoothedFrame.CopyTo(recImg);
                         CvInvoke.Resize(smoothedFrame, recImg, new Size(frameWidth, frameHeight), 0, 0, Emgu.CV.CvEnum.Inter.Linear);
                     }
@@ -100,12 +100,12 @@ namespace CamApp
                 {
                     //capture = new VideoCapture(camId, VideoCapture.API.Ffmpeg);
                     capture = new VideoCapture("rtsp://admin:admin@192.168.1.88:554");
+
                     // Obtiene todos los dispositivos de cámara disponibles
                     DsDevice[] _SystemCamereas = DsDevice.GetDevicesOfCat(FilterCategory.VideoInputDevice);
                     var dataSource = new List<Camera>();
                     capture.ImageGrabbed += ProcessFrame;
-                    /*Thread t = new Thread(new ThreadStart(ThreadFunction));
-                    t.Start();*/
+
                     for (int i = 0; i < _SystemCamereas.Length; i++)
                     {
                         dataSource.Add(new Camera() { Name = _SystemCamereas[i].Name.ToString(), Id = i });

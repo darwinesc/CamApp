@@ -76,7 +76,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DirectShowLib-2005">
-      <HintPath>..\..\..\Downloads\directshowlib-2005.dll</HintPath>
+      <HintPath>..\directshowlib-2005.dll</HintPath>
     </Reference>
     <Reference Include="Emgu.CV.UI, Version=4.2.0.3636, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
       <HintPath>..\packages\Emgu.CV.runtime.windows.4.2.0.3636\lib\net461\Emgu.CV.UI.dll</HintPath>
